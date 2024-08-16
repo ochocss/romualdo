@@ -1,6 +1,7 @@
 package pessoa;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class PessoaFisica extends Pessoa {
 	private String cpf;
@@ -25,20 +26,19 @@ public class PessoaFisica extends Pessoa {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if(this == obj) {
+	public boolean equals(Object o) {
+		if (this == o) {
 			return true;
 		}
-		
-		if(!super.equals(obj) || !(obj instanceof PessoaFisica)) {
-			return false;
-		}
-		
-		PessoaFisica temp = (PessoaFisica) obj;
-		if(!this.cpf.equals(temp.cpf)) {
+
+		if (!(o instanceof PessoaFisica that)) {
 			return false;
 		}
 
-		return true;
+		if (!super.equals(o)) {
+			return false;
+		}
+
+        return Objects.equals(cpf, that.cpf);
 	}
 }

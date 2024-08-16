@@ -1,10 +1,7 @@
-package pessoa.main;
+package pessoa;
 
 import java.time.LocalDate;
 import java.time.Month;
-
-import pessoa.PessoaFisica;
-import pessoa.PessoaJuridica;
 
 public class Main {
    public Main() {
@@ -17,7 +14,7 @@ public class Main {
                                           LocalDate.of(1981,Month.APRIL,13),
                                           "49398715252", 
                                           "Rua Ednaldo", 190, "Barro", "Rolandia", "12345678");
-      
+
       System.out.println(pf1);
       System.out.println(pf2);
       

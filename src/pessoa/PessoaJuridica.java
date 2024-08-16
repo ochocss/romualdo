@@ -1,6 +1,7 @@
 package pessoa;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class PessoaJuridica extends Pessoa {
 	private String nomeFantasia;
@@ -36,20 +37,19 @@ public class PessoaJuridica extends Pessoa {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if(this == obj) {
+	public boolean equals(Object o) {
+		if (this == o) {
 			return true;
 		}
-		
-		if(!super.equals(obj) || !(obj instanceof PessoaJuridica)) {
-			return false;
-		}
-		
-		PessoaJuridica temp = (PessoaJuridica) obj;
-		if(!this.cnpj.equals(temp.cnpj) || !this.nomeFantasia.equals(temp.nomeFantasia)) {
+
+		if (!(o instanceof PessoaJuridica that)) {
 			return false;
 		}
 
-		return true;
+		if (!super.equals(o)) {
+			return false;
+		}
+
+        return Objects.equals(nomeFantasia, that.nomeFantasia) && Objects.equals(cnpj, that.cnpj);
 	}
 }
