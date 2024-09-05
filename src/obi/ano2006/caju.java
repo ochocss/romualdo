@@ -3,16 +3,6 @@ package obi.ano2006;
 import java.util.Scanner;
 
 public class caju {
-    private static void aprint(int[][] matriz, int l, int c) {
-        System.out.print("\n");
-        for(int i = 0; i < l; i++) {
-            for(int j = 0; j < c; j++) {
-                System.out.printf("%d ", matriz[i][j]);
-            }
-            System.out.print("\n");
-        }
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

@@ -40,6 +40,8 @@ public class concatena {
 			resp[i] = potencial;
 		}
 		
+		sc.close();
+		
 		for(int i = 0; i < q; i++) {
 			System.out.println(resp[i]);
 		}
