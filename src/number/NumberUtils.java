@@ -105,23 +105,6 @@ public final class NumberUtils {
 	public static boolean divBy10(long num) {
 		return num % 10 == 0;
 	}
-
-	public static ArrayList<Byte> getDiv(long num) {
-		ArrayList<Byte> divArray = new ArrayList<>();
-		divArray.add((byte) 1);
-		
-		if(divBy2(num)) { divArray.add((byte) 2); }
-		if(divBy3(num)) { divArray.add((byte) 3); }
-		if(divBy4(num)) { divArray.add((byte) 4); }
-		if(divBy5(num)) { divArray.add((byte) 5); }
-		if(divBy6(num)) { divArray.add((byte) 6); }
-		if(divBy7(num)) { divArray.add((byte) 7); }
-		if(divBy8(num)) { divArray.add((byte) 8); }
-		if(divBy9(num)) { divArray.add((byte) 9); }
-		if(divBy10(num)) { divArray.add((byte) 10); }
-		
-		return divArray;
-	}
 	
 	public static boolean checkCapicua(long num) {
 		return num == reverse(num);
